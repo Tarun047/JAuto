@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.java\shell\RunJAuto\command]
+@="\"C:\\Python\\JCompiler\\JAuto.cmd\" \"%1\".java"
