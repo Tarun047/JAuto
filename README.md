@@ -11,7 +11,7 @@ Go to any desired Java source file and say Run JAuto<br />
 JAVA Source Code:<br />
 ![pric0](https://user-images.githubusercontent.com/32017154/41367599-1e1db576-6f5d-11e8-839a-1ab609ff09a0.PNG)
 <br />
-![pric](https://user-images.githubusercontent.com/32017154/41367470-c64c4b3c-6f5c-11e8-8c7c-501e8bbcb915.PNG)
+![pric](https://user-images.githubusercontent.com/32017154/41367705-7021af8a-6f5d-11e8-8a95-92022f1ca46a.PNG)
 <br />
 ![pric2](https://user-images.githubusercontent.com/32017154/41367523-f396676c-6f5c-11e8-872f-293fd0d34ba7.PNG)
 <br />
