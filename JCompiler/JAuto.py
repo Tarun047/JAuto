@@ -1,22 +1,19 @@
-import os
 import tempfile
-import shutil
-from subprocess import check_output
-from os.path import basename,normpath,splitext
+import subprocess
 import sys
+import os
 
-base = os.getcwd()
-name = basename(normpath(base))
-temp = tempfile.mkdtemp(prefix=name,dir=base)
-try:
+with tempfile.TemporaryDirectory(prefix = sys.argv[1],dir=os.getcwd()) as temp:
     if len(sys.argv)==1:
         print("Please Specify FileName")
         sys.exit(0)
-    check_output('javac -d '+temp+' '+sys.argv[1],shell=True)
-    mainclassname = input('Please Enter: Main Class Name:(leave blank for default filename)')
-    if mainclassname == '':
-        mainclassname=splitext(sys.argv[1])[0]
+    p = subprocess.Popen('javac -d '+temp+' '+sys.argv[1],shell=True)
     
-    print(check_output('java '+mainclassname,shell=True,cwd=temp).decode('utf-8'),file=sys.stdout)
-finally:
-    shutil.rmtree(temp)
+    mainclassname = input('Please Enter: Main Class Name:(leave blank for default filename)\n')
+    if mainclassname == '':
+        mainclassname=os.path.splitext(sys.argv[1])[0]
+    subprocess.call('java '+mainclassname,shell=True,cwd=temp)
+    try:
+        os.remove(temp)
+    except:
+        sys.exit(0)
